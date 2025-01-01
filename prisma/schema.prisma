@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Prompt {
+  id        String     @id @default(cuid())
+  content   String
+  createdAt DateTime   @default(now())
+  responses Response[]
+}
+
+model Response {
+  id           String   @id @default(cuid())
+  model        String
+  content      String
+  accuracy     Float
+  relevancy    Float
+  responseTime Int
+  createdAt    DateTime @default(now())
+  prompt       Prompt   @relation(fields: [promptId], references: [id])
+  promptId     String
+}
+
