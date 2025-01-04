@@ -4,6 +4,7 @@ import { openai } from '@ai-sdk/openai';
 import { anthropic } from '@ai-sdk/anthropic';
 import { cohere } from '@ai-sdk/cohere';
 import { saveResponse } from '@/lib/db';
+// import { evaluateAccuracy, evaluateRelevancy } from '@/lib/evaluate';
 
 export async function POST(req: Request) {
   try {
@@ -34,6 +35,7 @@ export async function POST(req: Request) {
 
           const accuracy = Math.random() * 0.5 + 0.5;
           const relevancy = Math.random() * 0.5 + 0.5;
+          // TODO: Implement real not random accuracy and relevancy evaluation
 
           await saveResponse({
             model: name,
