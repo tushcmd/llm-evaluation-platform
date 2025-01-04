@@ -44,6 +44,15 @@ Start the development server
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Tech Stack
+
+Nextjs
+Tailwind
+Shadcn
+PostgreSQL(Neon)
+Prisma
+Recharts
+
 ## Screenshots
 
 ![main](public/main.png)
