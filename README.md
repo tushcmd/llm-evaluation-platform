@@ -46,12 +46,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Tech Stack
 
-Nextjs
-Tailwind
-Shadcn
-PostgreSQL(Neon)
-Prisma
-Recharts
+- Nextjs
+- Tailwind
+- Shadcn
+- PostgreSQL(Neon)
+- Prisma
+- Recharts
 
 ## Screenshots
 
